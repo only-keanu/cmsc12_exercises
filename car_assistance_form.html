@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Service Assistance Form</title>
+<style>
+    
+
+    .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    }
+
+    
+</style>
+</head>
+<body>
+    <div class="form-container">
+        <img src="https://img.freepik.com/premium-vector/car-tow-truck-roadside-assistance-vector-illustration-flat-design_136162-464.jpg?w=2000" alt="" srcset="" class="center">
+        <form action="submit">
+            <div class="form-title">
+                <h1 name="title" id="title-header">Car Service Assistance Form</h1>
+                <p name="welcome" id="welcome-p">Welcome! Please fill-out this form to get car service assistance from our team!</p>
+            </div>
+            <div class="form-customer-information">
+                <fieldset>
+                    <legend name="customer-information" id="customer-id">Customer Information</legend>
+                    <div>
+                        <label for="name">Name:</label>
+                        <input type="text"name="name" id="name" placeholder="Adrian Fernandez" required/>
+                    </div>
+                    <div>
+                        <label for="contact-number">Mobile Number:</label>
+                        <input type="tel"name="contact-number" id="mobile" placeholder="09XXXXXXXXX" pattern="^(09|\+639)\d{9}$" required/>
+                    </div>
+                    <div>
+                        <label for="email">Email address:</label>
+                        <input type="email"name="contact-number" id="email" placeholder="adrian@gmail.com" required/>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="first-time" id="first-time" checked="checked">
+                        <label for="">First time customer?</label>
+                    </div>
+                </fieldset>
+            </div>
+            <br/>
+            <div class="form-car-information">
+                <fieldset>
+                    <legend for="car-information">Car Information</legend>
+                    <label for="cars">Car Make:</label>
+                    <select id="cars" name="cars" required>
+                        <option value="bmw">BMW</option>
+                        <option value="chevrolet">Chevrolet</option>
+                        <option value="hyundai">Hyundai</option>
+                        <option value="honda">Honda</option>
+                        <option value="kia">Kia</option>
+                        <option value="toyota">Toyota</option>
+                        <option value="others">Others</option>
+                    </select>
+                    <div class="form-radio-group">
+                        <label for="">Car Type</label><br>
+                        <input type="radio" name="car-type" id="" checked="checked" required>Sedan<br/>
+                        <input type="radio" name="car-type" id="" required>SUV<br/>
+                        <input type="radio" name="car-type" id="" required>Van<br/>
+                        <input type="radio" name="car-type" id="" required>Others
+                    </div>
+                    <div>
+                        <label for="car-model">Car Model:</label>
+                        <input type="text" name="car-model" id="model" required>
+                    </div>
+                    <div>
+                        <label for="car-year">Year:</label>
+                        <input type="text" name="car-year" id="year" placeholder="XXXX" pattern="^\d{4}$">
+                    </div>
+                    <div>
+                        <label for="car-color">Color:</label>
+                        <input type="text" name="car-color" id="color" placeholder="Yellow" required>
+                    </div>
+                </fieldset>    
+            </div>
+            <div class="form-car-repair">
+                <fieldset>
+                    <legend for="repair-and-other-services">Repair and other services</legend>
+                    <div class="engine-services"><br>
+                        <label for="repair-and-other-services">ENGINE SERVICES</label><br>
+                        <label for="">Services</label><br>    
+                        <input type="radio" name="engine-services" id="PMS" checked="checked" required>Periodic Maintenance Service<br>
+                        <input type="radio" name="engine-services" id="others" required>Repairs/others<br>
+                        <ul>
+                            <input type="checkbox" name="others" id="brakes">Brakes<br>
+                            <input type="checkbox" name="others" id="trasmission">Transmission<br>
+                            <input type="checkbox" name="others" id="change-oil">Change oil<br>
+                            <input type="checkbox" name="others" id="other-repairs">Others<br>
+                                <label for="">Please specify:</label><input type="text" name="others" id="specified">
+                        </ul>
+                    </div>
+                    <br>
+                    <div class="body-works">
+                        <label for="repair-and-other-services">BODY WORKS</label><br>
+                        <label for="body-works">Services</label><br>
+                            <input type="checkbox" name="body-works" id="dent-repairs" >Dent Repairs <br>
+                            <input type="checkbox" name="body-works" id="repainting" >Repainting<br>
+                            <input type="checkbox" name="body-works" id="tire-replacement" >Tire Replacement<br>
+                            <input type="checkbox" name="body-works" id="car-wash" >Car Wash <br>
+                                <ul>
+                                    <input type="checkbox" name="car-wash" id="interior-detail" >Interior Detailing<br>
+                                    <input type="checkbox" name="car-wash" id="exterior-detail" >Exterior Detailing<br>
+                                    <input type="checkbox" name="car-wash" id="car-wax" >Car Wax<br>
+                                    <input type="checkbox" name="car-wash" id="paint-protection" >Paint Protection Coat<br>
+                                </ul>
+                        
+                    </div>
+                    <br>
+                    <div class="electricals">
+                        <label for="repair-and-other-services">ELECTRICALS</label><br>
+                        <label for="electricals">Repairs/Replacement</label><br>  
+                        <input type="checkbox" name="repairs" id="power-windows">Power Windows <br>
+                        <input type="checkbox" name="repairs" id="airconditioning">Airconditioning<br>
+                        <input type="checkbox" name="repairs" id="lights">Lights<br>
+                        <input type="checkbox" name="repairs" id="car-audio">Car Audio<br>
+                    </div>
+                    
+                </fieldset>
+            </div>
+            <div class="form-appointment">
+                <fieldset>
+                    <legend>Appointment Schedule and Other Concerns</legend><br>
+                    <label for="appointment-schedule">Appointment date:</label><input type="date" name="schedule" id="date" required><br>
+                    <label for="appointment-schedule">Appointment time:</label><input type="time" name="schedule" id="time" required><br>
+                    <label for="appointment-schedule">Other concerns:</label><br><textarea placeholder="Write here..." name="other-concern" id="other-concern" cols="50" rows="10" ></textarea>
+                </fieldset>
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
